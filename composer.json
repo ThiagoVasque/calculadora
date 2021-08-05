@@ -1,0 +1,12 @@
+{
+    "name": "vendor/somar-valores",
+    "authors": [
+        {
+            "name": "Thiago Vasque",
+            "email": "thiagonunesvasque078@gmail.com"
+        }
+    ],
+    "require": {
+        "league/climate": "^3.7"
+    }
+}
