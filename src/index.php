@@ -11,13 +11,14 @@ $climate = new CLImate();
 $padding = $climate->padding(20);
 
 $padding->label('Somar valores')->result('[1]');
+$padding->label('Subtrair valores')->result('[2]');
 $padding->label('sair')->result('[q]');
 
 $climate->br();
 
 $input = $climate->input('Selecione uma opção do MENU');
 
-$input->accept([1,'q']);
+$input->accept([1,2,'q']);
 $input->strict();
 
 $response = $input->prompt();
@@ -35,6 +36,22 @@ switch ($response) {
     $soma = $valorPrimeiroNumero + $valorSegundoNumero;
 
     $climate->output(sprintf('soma %s com %s é igual: %s', $valorPrimeiroNumero, $valorSegundoNumero, $soma));
+
+
+        break;
+
+        case '2';
+    $primeiroNumero = $climate->input('Primeiro valor:');
+
+    $valorPrimeiroNumero = $primeiroNumero->prompt();
+
+    $segundoNumero = $climate->input('Segundo valor:');
+
+    $valorSegundoNumero = $segundoNumero->prompt();
+
+    $subtrair = $valorPrimeiroNumero - $valorSegundoNumero;
+
+    $climate->output(sprintf('soma %s com %s é igual: %s', $valorPrimeiroNumero, $valorSegundoNumero, $subtrair));
 
 
         break;
