@@ -7,6 +7,7 @@
         }
     ],
     "require": {
-        "league/climate": "^3.7"
+        "league/climate": "^3.7",
+        "respect/validation": "^2.2"
     }
 }
